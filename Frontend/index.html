@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon Order Chatbot</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background: #f3f4f6;
+        }
+
+        /* Header */
+        header {
+            background: #111827;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Chat container */
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* Messages */
+        #chatBox {
+            flex: 1;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            overflow-y: auto;
+            margin-bottom: 12px;
+        }
+
+        .message {
+            margin-bottom: 10px;
+        }
+
+        .user {
+            text-align: right;
+            color: #2563eb;
+        }
+
+        .bot {
+            text-align: left;
+            color: #111827;
+        }
+
+        /* Input area */
+        .chat-input {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .chat-input button {
+            padding: 10px 16px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .chat-input button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    🧠 Amazon Order & Product Chatbot
+</header>
+
+<div class="chat-container">
+
+    <!-- Chat messages -->
+    <div id="chatBox">
+        <div class="message bot">
+            <b>Bot:</b> Hello 👋 Ask me about your order delivery or products.
+        </div>
+    </div>
+
+    <!-- Chat input -->
+    <div class="chat-input">
+        <input
+            id="chatInput"
+            type="text"
+            placeholder="e.g. What is the delivery summary of order 10003?"
+            onkeydown="if(event.key === 'Enter') sendMessage()"
+        />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

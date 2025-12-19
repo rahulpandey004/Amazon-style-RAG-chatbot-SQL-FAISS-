@@ -1,0 +1,42 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+
+# =========================
+# Vector DB / RAG artifacts
+# =========================
+vector_store/
+faiss.index
+metadata.pkl
+*.faiss
+
+# =========================
+# Logs / temp files
+# =========================
+*.log
+*.tmp
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDEs
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/

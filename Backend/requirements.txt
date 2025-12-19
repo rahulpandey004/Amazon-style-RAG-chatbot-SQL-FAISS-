@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+
+sentence-transformers
+faiss-cpu
+
+sqlalchemy
+psycopg2-binary
+
+pydantic
+python-dotenv
+
+google-generativeai
